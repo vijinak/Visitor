@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-function CP() {
+function CP(/* {onCpNameSubmit} */) {
     const [formData, setFormData] = useState({
         cpName: '',
         phoneNumber: '',
@@ -24,6 +24,7 @@ function CP() {
         e.preventDefault();
         setSubmittedData(formData); // Save form data
         setIsEditing(false); // Hide form, show details
+        alert('Data submitted successfully!');
       };
     
       const handleEdit = () => {

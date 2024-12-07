@@ -10,7 +10,7 @@ function Header() {
 <Navbar /* bg="primary" */ data-bs-theme="dark" >
         <Container>
           
-          <Nav style={{marginLeft:'360px', marginTop:'20px'}}>
+          <Nav style={{marginLeft:'390px', marginTop:'20px'}}>
             <Nav.Link href="/" className='me-5' style={{fontSize:'25px',color:'rgb(103, 107, 107)',fontWeight:'bold'}}>CP</Nav.Link>
             <Nav.Link href="/creation" className='me-5' style={{fontSize:'25px',color:'rgb(103, 107, 107)',fontWeight:'bold'}}>Visitor Creation</Nav.Link>
             <Nav.Link href="/property" style={{fontSize:'25px',color:'rgb(103, 107, 107)',fontWeight:'bold'}}>Property</Nav.Link>
