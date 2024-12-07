@@ -22,43 +22,17 @@ function CP(/* {onCpNameSubmit} */) {
     
       const handleSubmit = (e) => {
         e.preventDefault();
-        setSubmittedData(formData); // Save form data
-        setIsEditing(false); // Hide form, show details
+        setSubmittedData(formData); 
+        setIsEditing(false); 
         alert('Data submitted successfully!');
       };
     
       const handleEdit = () => {
-        setIsEditing(true); // Show form with the existing data
+        setIsEditing(true); 
       };
   return (
     <>
-    {/* <div className=' d-flex justify-content-center align-items-center'style={{ width: '50%', height: '50vh', marginLeft:'350px' }}>
-        <div >
-        
-        <form className='mt-5'>
-          <div className="mb-3">
-            <TextField id="outlined-basic" label="CP Name" variant="outlined" className='w-100' />
-          </div>
-          <div className="mb-3">
-            <TextField id="outlined-basic" label="Phone Number" variant="outlined" className='w-100'/>
-          </div>
-          <div className="mb-3">
-            <TextField id="outlined-basic" label="Email id" variant="outlined" className='w-100' />
-          </div>
-          <div className="d-flex justify-content-between w-100 mt-4">
-            <Button variant="contained" color='success' style={{width:'150px', height:'50px', marginRight:'20px', marginLeft:'15px'}}>Submit</Button>
-            <Button variant="outlined"  style={{width:'150px', height:'50px', marginRight:'20px', marginLeft:'15px'}}>Edit</Button>
-          </div>
-        </form>
-        </div>
-        
-    </div>
-    <div className="mt-5" style={{margin:'330px'}}>
-            <h4>Submitted Details:</h4>
-            <p><strong>CP Name:</strong> </p>
-            <p><strong>Phone Number:</strong> </p>
-            <p><strong>Email ID:</strong> </p>
-          </div> */}
+   
           <div className="d-flex flex-column align-items-center " >
       {!submittedData || isEditing ? (
         <div
@@ -130,6 +104,7 @@ function CP(/* {onCpNameSubmit} */) {
           <p>
             <strong>Email ID:</strong> {submittedData.emailId}
           </p>
+          
           <Button
             variant="outlined"
             onClick={handleEdit}

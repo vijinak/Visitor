@@ -8,11 +8,10 @@ const PORT=5005;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Initialize workbook
+
 const workbook = new ExcelJS.Workbook();
 const sheet = workbook.addWorksheet('Visitor Data');
 
-// Define initial columns
 sheet.columns = [
   { header: 'Visitor Name', key: 'visitorName', width: 20 },
   { header: 'Phone Number', key: 'phoneNumber', width: 15 },
@@ -26,7 +25,6 @@ sheet.columns = [
 app.post('/submit', async (req, res) => {
   const data = req.body;
 
-  // Add data to Excel sheet
   sheet.addRow({
     visitorName: data.visitorName,
     phoneNumber: data.phoneNumber,
@@ -37,7 +35,6 @@ app.post('/submit', async (req, res) => {
     // budget: data.budget,
   });
 
-  // Save Excel file in memory
   await workbook.xlsx.writeFile('./visitor_report.xlsx');
   res.status(200).send('Data added to Excel sheet!');
 });
